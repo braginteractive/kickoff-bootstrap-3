@@ -102,9 +102,9 @@ add_action( 'widgets_init', 'kickoff_widgets_init' );
 require get_template_directory() . '/inc/scripts.php';
 
 /**
- * Implement the Custom Header feature.
+ * Load Bootstrap Menu.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/bootstrap-walker.php';
 
 /**
  * Custom template tags for this theme.

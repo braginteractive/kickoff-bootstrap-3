@@ -21,15 +21,40 @@
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div><!-- .site-branding -->
+		<nav role="navigation" id="navbar-main">
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a>	
+					</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kickoff' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+					<div class="navbar-collapse collapse navbar-responsive-collapse">
+						<?php
+
+						$args = array(
+							'theme_location' => 'primary',
+							'depth'      => 2,
+							'container'  => false,
+							'menu_class'     => 'nav navbar-nav',
+							'walker'     => new Bootstrap_Walker_Nav_Menu()
+							);
+
+						if (has_nav_menu('primary')) {
+							wp_nav_menu($args);
+						}
+
+						?>
+
+					</div>
+				</div>
+			</div>           
+		</nav>
 	</header><!-- #masthead -->
 
 <div class="container">

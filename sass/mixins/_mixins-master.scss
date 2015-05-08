@@ -4,20 +4,19 @@
 	font-size: $sizeValue * 1rem;
 }
 
-// Center block
-@mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-// Clearfix
-@mixin clearfix() {
-	content: "";
-	display: table;
-}
-
-// Clear after (not all clearfix need this also)
-@mixin clearfix-after() {
-	clear: both;
+// Add padding to fixed Bootstrap navbar thanks to
+// http://www.sitepoint.com/getting-sticky-headers-wordpress-admin-bar-behave/
+@mixin admin-sticky-fix( $offset: 0 ) {
+  $narrow-offset: 46px;
+  $wide-offset: 32px;
+  @if $offset != 0 and type-of($offset) == 'number' {
+    $narrow-offset: $narrow-offset + $offset;
+    $wide-offset: $wide-offset + $offset;
+  }
+  .admin-bar & {
+    top: $narrow-offset;
+    @media screen and (min-width: 783px) {
+      top: $wide-offset;
+    }
+  }
 }

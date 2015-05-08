@@ -20,7 +20,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 
-
 /*--------------------------------------------------------------
 # Bootstrap
 Customize Bootstrap: http://treyhunner.com/2015/02/creating-a-custom-bootstrap-build/
@@ -41,4 +40,9 @@ Mixins: http://www.sitepoint.com/5-useful-sass-mixins-bootstrap/
 @import "modules/alignments";
 @import "modules/clearings";
 @import "media/media";
+
+/*--------------------------------------------------------------
+# Custom styles
+--------------------------------------------------------------*/
+@import "custom";
 

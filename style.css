@@ -7670,27 +7670,68 @@ button.close {
   margin-left: auto;
   margin-right: auto; }
 
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-  content: "";
+.clear:before:before,
+.clear:before:after,
+.clear:after:before,
+.clear:after:after,
+.entry-content:before:before,
+.entry-content:before:after,
+.entry-content:after:before,
+.entry-content:after:after,
+.comment-content:before:before,
+.comment-content:before:after,
+.comment-content:after:before,
+.comment-content:after:after,
+.site-header:before:before,
+.site-header:before:after,
+.site-header:after:before,
+.site-header:after:after,
+.site-content:before:before,
+.site-content:before:after,
+.site-content:after:before,
+.site-content:after:after,
+.site-footer:before:before,
+.site-footer:before:after,
+.site-footer:after:before,
+.site-footer:after:after {
+  content: " ";
   display: table; }
 
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
+.clear:before:after,
+.clear:after:after,
+.entry-content:before:after,
+.entry-content:after:after,
+.comment-content:before:after,
+.comment-content:after:after,
+.site-header:before:after,
+.site-header:after:after,
+.site-content:before:after,
+.site-content:after:after,
+.site-footer:before:after,
+.site-footer:after:after {
+  clear: both; }
+
+.clear:after:before,
+.clear:after:after,
+.entry-content:after:before,
+.entry-content:after:after,
+.comment-content:after:before,
+.comment-content:after:after,
+.site-header:after:before,
+.site-header:after:after,
+.site-content:after:before,
+.site-content:after:after,
+.site-footer:after:before,
+.site-footer:after:after {
+  content: " ";
+  display: table; }
+
+.clear:after:after,
+.entry-content:after:after,
+.comment-content:after:after,
+.site-header:after:after,
+.site-content:after:after,
+.site-footer:after:after {
   clear: both; }
 
 .page-content .wp-smiley,
@@ -7700,12 +7741,6 @@ button.close {
   margin-bottom: 0;
   margin-top: 0;
   padding: 0; }
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%; }
 
 /*--------------------------------------------------------------
 ## Captions
@@ -7753,3 +7788,18 @@ object {
 
 .gallery-caption {
   display: block; }
+
+/*--------------------------------------------------------------
+# Custom styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Needed if using a fixed navbar
+--------------------------------------------------------------*/
+body {
+  padding-top: 70px; }
+
+.admin-bar .navbar {
+  top: 46px; }
+  @media screen and (min-width: 783px) {
+    .admin-bar .navbar {
+      top: 32px; } }

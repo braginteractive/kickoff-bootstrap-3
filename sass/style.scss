@@ -19,27 +19,23 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
+/*--------------------------------------------------------------
+# Bootstrap
+Customize Bootstrap: http://treyhunner.com/2015/02/creating-a-custom-bootstrap-build/
+--------------------------------------------------------------*/
 @import "bootstrap";
 
+/*--------------------------------------------------------------
+# Font Awesome
+--------------------------------------------------------------*/
 @import "font-awesome";
 
+/*--------------------------------------------------------------
+# Default _s styles. Are these needed?
+--------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
 @import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
 @import "modules/clearings";
-
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
 @import "media/media";
 

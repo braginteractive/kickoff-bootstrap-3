@@ -19,6 +19,10 @@ Kickoff is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+/*--------------------------------------------------------------
+# Bootstrap
+Customize Bootstrap: http://treyhunner.com/2015/02/creating-a-custom-bootstrap-build/
+--------------------------------------------------------------*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5826,6 +5830,9 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+/*--------------------------------------------------------------
+# Font Awesome
+--------------------------------------------------------------*/
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -7624,7 +7631,7 @@ button.close {
   content: ""; }
 
 /*--------------------------------------------------------------
-# Alignments
+# Default _s styles. Are these needed?
 --------------------------------------------------------------*/
 .alignleft {
   display: inline;
@@ -7641,9 +7648,6 @@ button.close {
   margin-left: auto;
   margin-right: auto; }
 
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -7667,9 +7671,6 @@ button.close {
 .site-footer:after {
   clear: both; }
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {

@@ -14,6 +14,11 @@ var gulp = require( 'gulp' ),
   sass = require( 'gulp-sass' );
   imagemin = require('gulp-imagemin');
   bower = require('gulp-bower');
+
+var config = {
+     sassPath: './resources/sass',
+     bowerDir: './bower_components' 
+}
  
  
 // Default error handler
@@ -22,9 +27,15 @@ var onError = function( err ) {
   this.emit('end');
 }
 
+// Install all Bower components
 gulp.task('bower', function() {
   return bower()
-    .pipe(gulp.dest('./bower_components/'))
+    .pipe(gulp.dest(config.bowerDir))
+});
+
+gulp.task('icons', function() { 
+    return gulp.src(config.bowerDir + '/fontawesome/fonts/**.*') 
+        .pipe(gulp.dest('./fonts')); 
 });
  
  
@@ -61,8 +72,9 @@ gulp.task('sass', function() {
   return gulp.src('./sass/style.scss')
     .pipe( plumber( { errorHandler: onError } ) )
     .pipe( sass({
-        includePaths: ['./bower_components/bootstrap-sass/assets/stylesheets'],
-    }) )
+        includePaths: [config.bowerDir + '/bootstrap-sass/assets/stylesheets', 
+                       config.bowerDir + '/fontawesome/scss'],
+     }) )
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe( gulp.dest( '.' ) )
     .pipe( minifycss() )
@@ -99,6 +111,6 @@ gulp.task( 'watch', function() {
 } );
  
  
-gulp.task( 'default', ['watch'], function() {
+gulp.task( 'default', ['bower', 'icons'], function() {
  // Does nothing in this task, just triggers the dependent 'watch'
 } );

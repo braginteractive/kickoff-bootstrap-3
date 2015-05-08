@@ -37,7 +37,7 @@ You'll need to change all instances of the names: `kickoff` to your project name
 That's it! Now you can begin using Grunt.
 
 # Usage
-After you've installed kickoff, and run `npm install` and `gulp bower` from the command line you can start using gulp.
+After you've installed kickoff, and run `npm install` and `gulp` from the command line you can start using gulp.
 
 ## Gulp
 
@@ -46,10 +46,14 @@ After you've installed kickoff, and run `npm install` and `gulp bower` from the 
 
 ##### 2) Gulp tasks available:
 
-`gulp` - Automatically handle changes to CSS, javascript, and image optimization. Also Livereload!
+`gulp` - Installs Bower Components and Font Awesome
+
+`gulp watch` - Automatically handle changes to CSS, javascript, php, and image optimization. Also Livereload!
 
 `gulp scripts` - Concatenate and minify javascript files
 
 `gulp sass` - Compile, prefix, and minify CSS files
 
 `gulp bower` - Install bower components
+
+`gulp icons` - creates /fonts/ directory and adds Font Awesome font files

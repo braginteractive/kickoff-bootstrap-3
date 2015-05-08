@@ -16,7 +16,6 @@ var gulp = require( 'gulp' ),
   bower = require('gulp-bower');
 
 var config = {
-     sassPath: './resources/sass',
      bowerDir: './bower_components' 
 }
  

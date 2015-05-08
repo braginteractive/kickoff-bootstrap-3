@@ -37,7 +37,7 @@ You'll need to change all instances of the names: `kickoff` to your project name
 That's it! Now you can begin using Grunt.
 
 # Usage
-After you've installed kickoff, and run `npm install` and `npm install --save-dev gulp` from the command line you can start using gulp.
+After you've installed kickoff, and run `npm install` and `gulp bower` from the command line you can start using gulp.
 
 ## Gulp
 

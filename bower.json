@@ -1,0 +1,22 @@
+{
+  "name": "kickoff-bootstrap-3",
+  "version": "1.0.0",
+  "homepage": "https://github.com/braginteractive/kickoff-bootstrap-3",
+  "description": "Bootstrap 3 WordPress starter theme",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "Brad Williams"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4"
+  }
+}

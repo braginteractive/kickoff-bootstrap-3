@@ -22,6 +22,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Bootstrap
 Customize Bootstrap: http://treyhunner.com/2015/02/creating-a-custom-bootstrap-build/
+Mixins: http://www.sitepoint.com/5-useful-sass-mixins-bootstrap/
 --------------------------------------------------------------*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -7633,6 +7634,27 @@ button.close {
 /*--------------------------------------------------------------
 # Default _s styles. Are these needed?
 --------------------------------------------------------------*/
+@inlude make-row();
+.content-area {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .content-area {
+      float: left;
+      width: 66.66667%; } }
+
+.widget-area {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .widget-area {
+      float: left;
+      width: 33.33333%; } }
+
 .alignleft {
   display: inline;
   float: left;

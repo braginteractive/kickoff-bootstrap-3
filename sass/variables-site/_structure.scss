@@ -1,2 +1,11 @@
-$size__site-main: 100%;
-$size__site-sidebar: 25%;
+.site-content {
+	@inlude make-row();
+}
+
+.content-area {
+	@include make-md-column(8);
+}
+
+.widget-area {
+	@include make-md-column(4);
+}

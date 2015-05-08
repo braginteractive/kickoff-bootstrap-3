@@ -9,13 +9,16 @@
 ?>
 
 	</div><!-- #content -->
+</div><!-- .container -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'kickoff' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kickoff' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'kickoff' ), 'kickoff', '<a href="http://braginteractive.com" rel="designer">Brad Williams</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="site-info">
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'kickoff' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kickoff' ), 'WordPress' ); ?></a>
+				<span class="sep"> | </span>
+				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'kickoff' ), 'kickoff', '<a href="http://braginteractive.com" rel="designer">Brad Williams</a>' ); ?>
+			</div><!-- .site-info -->
+		</div><!-- .container -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -37,9 +37,18 @@ Mixins: http://www.sitepoint.com/5-useful-sass-mixins-bootstrap/
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-@import "modules/alignments";
 @import "modules/clearings";
 @import "media/media";
+
+/*--------------------------------------------------------------
+# WordPress Generated Classes
+--------------------------------------------------------------*/
+@import "modules/wp-classes";
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+@import "modules/comments";
 
 /*--------------------------------------------------------------
 # Custom styles

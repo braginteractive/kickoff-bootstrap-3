@@ -67,14 +67,31 @@ gulp.task( 'scripts', ['jshint'], function() {
  
 // As with javascripts this task creates two files, the regular and
 // the minified one. It automatically reloads browser as well.
+var options = {};
+options.sass = {
+  errLogToConsole: true,
+  sourceMap: 'sass',
+  sourceComments: 'map',
+  precision: 10,
+  //imagePath: 'assets/img',
+  includePaths: [
+    config.bowerDir + '/bootstrap-sass/assets/stylesheets',
+    config.bowerDir + '/fontawesome/scss',
+  ]
+};
+options.autoprefixer = {
+  map: true
+  //from: 'sass',
+  //to: 'asrp.min.css'
+};
+
 gulp.task('sass', function() {
   return gulp.src('./sass/style.scss')
     .pipe( plumber( { errorHandler: onError } ) )
-    .pipe( sass({
-        includePaths: [config.bowerDir + '/bootstrap-sass/assets/stylesheets', 
-                       config.bowerDir + '/fontawesome/scss'],
-     }) )
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(sass(options.sass))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4',
+      options.autoprefixer
+      ))
     .pipe( gulp.dest( '.' ) )
     .pipe( minifycss() )
     .pipe( rename( { suffix: '.min' } ) )

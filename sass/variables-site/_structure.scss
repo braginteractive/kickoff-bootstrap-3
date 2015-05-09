@@ -1,5 +1,6 @@
-.site-content {
-	@inlude make-row();
+.site-content,
+.site-info {
+	@include make-row();
 }
 
 .content-area {

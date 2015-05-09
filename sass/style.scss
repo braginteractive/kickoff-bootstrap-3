@@ -33,11 +33,18 @@ Mixins: http://www.sitepoint.com/5-useful-sass-mixins-bootstrap/
 @import "font-awesome";
 
 /*--------------------------------------------------------------
-# Default _s styles. Are these needed?
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Structure 
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
-@import "mixins/mixins-master";
-@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# WordPress Media
+--------------------------------------------------------------*/
 @import "media/media";
 
 /*--------------------------------------------------------------
@@ -49,6 +56,7 @@ Mixins: http://www.sitepoint.com/5-useful-sass-mixins-bootstrap/
 # Comments
 --------------------------------------------------------------*/
 @import "modules/comments";
+
 
 /*--------------------------------------------------------------
 # Custom styles

@@ -7828,9 +7828,25 @@ button.close {
   content: ""; }
 
 /*--------------------------------------------------------------
-# Default _s styles. Are these needed?
+# Mixins
 --------------------------------------------------------------*/
-@inlude make-row();
+/*--------------------------------------------------------------
+# Structure 
+--------------------------------------------------------------*/
+.site-content,
+.site-info {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .site-content:before,
+  .site-content:after,
+  .site-info:before,
+  .site-info:after {
+    content: " ";
+    display: table; }
+  .site-content:after,
+  .site-info:after {
+    clear: both; }
+
 .content-area {
   position: relative;
   min-height: 1px;
@@ -7851,70 +7867,9 @@ button.close {
       float: left;
       width: 33.33333%; } }
 
-.clear:before:before,
-.clear:before:after,
-.clear:after:before,
-.clear:after:after,
-.entry-content:before:before,
-.entry-content:before:after,
-.entry-content:after:before,
-.entry-content:after:after,
-.comment-content:before:before,
-.comment-content:before:after,
-.comment-content:after:before,
-.comment-content:after:after,
-.site-header:before:before,
-.site-header:before:after,
-.site-header:after:before,
-.site-header:after:after,
-.site-content:before:before,
-.site-content:before:after,
-.site-content:after:before,
-.site-content:after:after,
-.site-footer:before:before,
-.site-footer:before:after,
-.site-footer:after:before,
-.site-footer:after:after {
-  content: " ";
-  display: table; }
-
-.clear:before:after,
-.clear:after:after,
-.entry-content:before:after,
-.entry-content:after:after,
-.comment-content:before:after,
-.comment-content:after:after,
-.site-header:before:after,
-.site-header:after:after,
-.site-content:before:after,
-.site-content:after:after,
-.site-footer:before:after,
-.site-footer:after:after {
-  clear: both; }
-
-.clear:after:before,
-.clear:after:after,
-.entry-content:after:before,
-.entry-content:after:after,
-.comment-content:after:before,
-.comment-content:after:after,
-.site-header:after:before,
-.site-header:after:after,
-.site-content:after:before,
-.site-content:after:after,
-.site-footer:after:before,
-.site-footer:after:after {
-  content: " ";
-  display: table; }
-
-.clear:after:after,
-.entry-content:after:after,
-.comment-content:after:after,
-.site-header:after:after,
-.site-content:after:after,
-.site-footer:after:after {
-  clear: both; }
-
+/*--------------------------------------------------------------
+# WordPress Media
+--------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {

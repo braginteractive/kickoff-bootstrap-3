@@ -7833,18 +7833,14 @@ button.close {
 /*--------------------------------------------------------------
 # Structure 
 --------------------------------------------------------------*/
-.site-content,
-.site-info {
+.site-content {
   margin-left: -15px;
   margin-right: -15px; }
   .site-content:before,
-  .site-content:after,
-  .site-info:before,
-  .site-info:after {
+  .site-content:after {
     content: " ";
     display: table; }
-  .site-content:after,
-  .site-info:after {
+  .site-content:after {
     clear: both; }
 
 .content-area {

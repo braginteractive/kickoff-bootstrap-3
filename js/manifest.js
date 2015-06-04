@@ -1,2 +1,2 @@
- // Your scripts inside js/src directory
-//= include ./src/skip-link-focus-fix.js 
+// bootstrap bower package scripts
+//= include ../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js 

@@ -31,10 +31,10 @@ You'll need to change all instances of the names: `kickoff` to your project name
 - Search for (and include the leading space): <code>&nbsp;kickoff</code> and replace with: <code>&nbsp;Project Name</code>(with a space before it) to capture DocBlocks
 - Search for: `kickoff-` and replace with: `project-name-` to capture prefixed handles
 
-##### 4) Install Grunt and Dependencies
-- Run `npm install && bower install` from the command line to install Grunt and pull down any dependencies via Bower.
+##### 4) Install Gulp and Dependencies
+- Run `npm install && bower install` from the command line to install Gulp and pull down any dependencies via Bower.
 
-That's it! Now you can begin using Grunt.
+That's it! Now you can begin using Gulp.
 
 # Usage
 After you've installed kickoff, and run `npm install` and `gulp` from the command line you can start using gulp.
